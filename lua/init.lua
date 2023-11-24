@@ -24,6 +24,7 @@ require("lazy").setup({
     { 'rcarriga/nvim-dap-ui' },
     { 'mfussenegger/nvim-lint' },
     { 'mhartington/formatter.nvim' },
+    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 })
 
 -- 样式
