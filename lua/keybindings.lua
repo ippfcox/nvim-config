@@ -18,6 +18,22 @@ map('n', '<C-l>', ':BufferLineCycleNext<CR>', opt);
 -- nvim-cmp
 plugin_keybindings.cmp = function(cmp)
     return {
+        ['<Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            elseif vim.fn['vsnip#available'](1) == 1 then
+                feedkey('<Plug>(vsnip-expand-or-jump)', '')
+            elseif has_words_before() then
+                fallback()
+            end
+        end, { 'i', 's' }),
+        ['<S-Tab>'] = cmp.mapping(function ()
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif vim.fn['vsnip#jumpable'](-1) == 1 then
+                feedkey('<Plug>(vsnip-jump-prev)', '')
+            end
+        end, { 'i', 's' }),
         ['<C-k>'] = cmp.mapping.select_prev_item(),
         ['<C-j>'] = cmp.mapping.select_next_item(),
         ['<A-.>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
