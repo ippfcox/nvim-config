@@ -3,6 +3,7 @@ vim.g.maplocalleader = " "
 
 local map = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
+local plugin_keybindings = {}
 
 -- nvim-tree
 map('n', '<A-m>', ':NvimTreeToggle<CR>', opt);
@@ -14,3 +15,17 @@ map('n', '<A-l>', '<C-w>l', opt);
 map('n', '<C-h>', ':BufferLineCyclePrev<CR>', opt);
 map('n', '<C-l>', ':BufferLineCycleNext<CR>', opt);
 -- map('n', '', ':BufferLineCloseOthers<CR>', opt);
+-- nvim-cmp
+plugin_keybindings.cmp = function(cmp)
+    return {
+        ['<C-k>'] = cmp.mapping.select_prev_item(),
+        ['<C-j>'] = cmp.mapping.select_next_item(),
+        ['<A-.>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
+        ['<A-,>'] = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close() }),
+        ['<CR>'] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
+        ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+        ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+    }
+end
+
+return plugin_keybindings

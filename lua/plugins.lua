@@ -27,6 +27,15 @@ require("lazy").setup({
     { 'mfussenegger/nvim-lint' },
     { 'mhartington/formatter.nvim' },
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }, -- code highlight
+    { 'hrsh7th/cmp-nvim-lsp' }, -- { name = nvim_lsp }
+    { 'hrsh7th/cmp-buffer' },  -- { name = 'buffer' },
+    { 'hrsh7th/cmp-path' },    -- { name = 'path' }
+    { 'hrsh7th/cmp-cmdline' }, -- { name = 'cmdline' }
+    { 'hrsh7th/nvim-cmp' },
+    { 'hrsh7th/cmp-vsnip' },   -- { name = 'vsnip' }
+    { 'hrsh7th/vim-vsnip' },
+    { 'rafamadriz/friendly-snippets' },
+    { 'onsails/lspkind-nvim' },
 })
 
 -- nvim-tree config
@@ -35,9 +44,11 @@ require('plugin-configs.nvim-tree')
 -- bufferline config
 require('plugin-configs.bufferline')
 
--- tree-sitter config
-require('plugin-configs.tree-sitter')
+-- nvim-treesitter config
+require('plugin-configs.nvim-treesitter')
+
+-- nvim-cmp config
+require('plugin-configs.nvim-cmp')
 
 -- lsp config
 require('lsp.setup')
-
