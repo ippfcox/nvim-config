@@ -38,6 +38,13 @@ o/bo/wo分别表示主要区域，buffer区域和窗口区域
 - Alt+h/j/k/l，切换窗口
 - Ctrl+h/l，切换tab
 
+一些插件的快捷键配置也放在这里了
+- Tab/Ctrl+j，下一个补全
+- Shift+Tab/Ctrl+k，上一个补全
+- Alt+.，调出补全菜单
+- Alt+,，关闭补全菜单
+- Enter，确认
+
 ## packer
 
 不维护了，后续推荐的是lazy和pckr，我选用了lazy，因为nvchad也用这个

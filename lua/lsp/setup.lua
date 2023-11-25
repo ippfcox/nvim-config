@@ -36,7 +36,8 @@ require('mason-lspconfig').setup_handlers {
                 "--j=5",
                 "--header-insertion=never",
                 "--background-index",
-                "--query-driver=/opt/AllWinner/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g*"
+                -- "--query-driver=/opt/AllWinner/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-g*"
+                "--query-driver=/usr/bin/g++",
             }
         }
     end,
