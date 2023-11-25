@@ -56,8 +56,18 @@ o/bo/wo分别表示主要区域，buffer区域和窗口区域
 ## nvim-tree
 
 o 打开关闭文件夹
-a 创建文件
+a 创建文件，末尾有斜杠就是创建目录了
 r 重命名
 x 剪切
 c 拷贝
 p 粘贴
+
+## bufferline
+
+
+
+## tree-sitter
+
+:TSInstallInfo 查看安装信息
+:TSInstall xxx 安装某个高亮插件
+

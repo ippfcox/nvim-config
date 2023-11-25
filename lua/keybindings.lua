@@ -13,3 +13,4 @@ map('n', '<A-l>', '<C-w>l', opt);
 -- bufferline
 map('n', '<C-h>', ':BufferLineCyclePrev<CR>', opt);
 map('n', '<C-l>', ':BufferLineCycleNext<CR>', opt);
+-- map('n', '', ':BufferLineCloseOthers<CR>', opt);

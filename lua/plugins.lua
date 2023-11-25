@@ -1,3 +1,4 @@
+-- config lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -11,6 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- plugins list
 require("lazy").setup({
     { "ellisonleao/gruvbox.nvim",    priority = 1000, config = true },                                -- theme
     { "rmehri01/onenord.nvim",       priority = 1000, config = true },                                -- theme
@@ -27,60 +29,15 @@ require("lazy").setup({
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }, -- code highlight
 })
 
--- 样式
-require("gruvbox").setup {}
-vim.o.background         = 'dark'
-vim.o.termguicolors      = true
--- nvim-tree配置
-vim.g.loaded_netrw       = 1
-vim.g.loaded_netrwPlugin = 1
-require("nvim-tree").setup {
-    sort = {
-        sorter = "case_sensitive",
-    },
-    view = {
-        width = 30,
-    },
-    renderer = {
-        group_empty = true,
-    },
-    filters = {
-        -- dotfiles = true,
-    },
-}
--- bufferline
-require("bufferline").setup {
-    options = {
-        diagnostics = "nvim_lsp",
-        -- 留出nvim-tree的边栏空间
-        offsets = { {
-            filetype = "NvimTree",
-            text = "File Explorer",
-            highlight = "Directory",
-            text_align = "left",
-        } }
-    }
-}
--- lsp相关配置都写在这里
+-- nvim-tree config
+require('plugin-configs.nvim-tree')
+
+-- bufferline config
+require('plugin-configs.bufferline')
+
+-- tree-sitter config
+require('plugin-configs.tree-sitter')
+
+-- lsp config
 require('lsp.setup')
--- tree-sitter
-require('nvim-treesitter.configs').setup {
-    ensure_installed = { 'vim', 'lua', 'c', 'cpp', 'cmake', 'bash' },
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-    },
-    incremental_selection = {
-        enable = true,
-        keymaps = {
-            init_selection = '<CR>',
-            node_incremental = '<CR>',
-            node_decremental = '<BS>',
-            scope_incremental = '<TAB>',
-        },
-        indent = {
-            enable = false,
-        }
-    }
-}
 
