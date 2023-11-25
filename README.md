@@ -21,6 +21,8 @@ lua require('abc.123')
 - 安装插件
 - 配置颜色主题
 
+有可能需要安装python3-venv，否则cmake的lsp装不上
+
 ## basic.lua
 
 定义了一些基础的配置，具体有啥我也整不太明白

@@ -24,7 +24,7 @@ require("lazy").setup({
     { 'rcarriga/nvim-dap-ui' },
     { 'mfussenegger/nvim-lint' },
     { 'mhartington/formatter.nvim' },
-    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
+    { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' }, -- code highlight
 })
 
 -- 样式
@@ -63,5 +63,24 @@ require("bufferline").setup {
 }
 -- lsp相关配置都写在这里
 require('lsp.setup')
-
+-- tree-sitter
+require('nvim-treesitter.configs').setup {
+    ensure_installed = { 'vim', 'lua', 'c', 'cpp', 'cmake', 'bash' },
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+    },
+    incremental_selection = {
+        enable = true,
+        keymaps = {
+            init_selection = '<CR>',
+            node_incremental = '<CR>',
+            node_decremental = '<BS>',
+            scope_incremental = '<TAB>',
+        },
+        indent = {
+            enable = false,
+        }
+    }
+}
 
