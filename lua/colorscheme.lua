@@ -1,4 +1,5 @@
-require("gruvbox").setup({})
+local colorscheme = "onedark"
+require(colorscheme).setup({})
 vim.o.background = "dark"
 vim.o.termguicolors = true
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme(colorscheme)

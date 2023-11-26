@@ -14,8 +14,11 @@ vim.opt.rtp:prepend(lazypath)
 
 -- plugins list
 require("lazy").setup({
+    -- colorscheme plugin
     { "ellisonleao/gruvbox.nvim", priority = 1000, config = true }, -- theme
     { "rmehri01/onenord.nvim", priority = 1000, config = true }, -- theme
+    { "navarasu/onedark.nvim" },
+
     { "nvim-tree/nvim-tree.lua", priority = 1000, config = true }, -- file tree
     { "nvim-tree/nvim-web-devicons", priority = 1000, config = true }, -- file icon
     { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" }, -- bufferline, file tab
