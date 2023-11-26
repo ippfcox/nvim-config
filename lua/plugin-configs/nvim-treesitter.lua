@@ -1,5 +1,17 @@
 require("nvim-treesitter.configs").setup({
-    ensure_installed = { "vim", "lua", "c", "cpp", "cmake", "bash" },
+    ensure_installed = {
+        "vim",
+        "lua",
+        "c",
+        "cpp",
+        "cmake",
+        "bash",
+        "go",
+        "gomod",
+        "gosum",
+        "json",
+        "markdown",
+    },
     highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,

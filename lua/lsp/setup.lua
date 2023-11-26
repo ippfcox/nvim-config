@@ -2,10 +2,13 @@ require("mason").setup({})
 require("mason-lspconfig").setup({
     -- 先启用一些，会以默认配置启动
     ensure_installed = {
-        "lua_ls",
-        "bashls",
-        "clangd",
-        "cmake",
+        "lua_ls", -- lua
+        "bashls", -- bash
+        "clangd", -- c/cpp
+        "clang-format", -- c/cpp format
+        "cmake", -- cmake
+        "gopls", -- go
+        "goimports", -- go format
     },
 })
 require("mason-lspconfig").setup_handlers({

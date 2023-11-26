@@ -7,6 +7,7 @@ local plugin_keybindings = {}
 
 -- basic
 map("n", ";", ":", opt)
+map("n", "<leader>w", ":w", opt)
 
 -- nvim-tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
