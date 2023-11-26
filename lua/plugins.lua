@@ -36,6 +36,7 @@ require("lazy").setup({
     { "hrsh7th/vim-vsnip" },
     { "rafamadriz/friendly-snippets" },
     { "onsails/lspkind-nvim" },
+    { "famiu/bufdelete.nvim" },
 })
 
 -- nvim-tree config

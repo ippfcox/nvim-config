@@ -20,6 +20,7 @@ map("n", "<A-l>", "<C-w>l", opt)
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 -- map('n', '', ':BufferLineCloseOthers<CR>', opt)
+map("n", "<leader>q", ":Bdelete<CR>", opt)
 
 -- formatter
 map("n", "<Leader>f", ":Format<CR>", opt)
