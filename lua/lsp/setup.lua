@@ -3,13 +3,13 @@ require("mason-lspconfig").setup({
 	-- 先启用一些，会以默认配置启动
 	ensure_installed = {
 		"lua_ls", -- lua
-		"stylua", -- lua format
+		-- "stylua", -- lua format
 		"bashls", -- bash
 		"clangd", -- c/cpp
-		"clang-format", -- c/cpp format
+		-- "clang-format", -- c/cpp format
 		"cmake", -- cmake
 		"gopls", -- go
-		"goimports", -- go format
+		-- "goimports", -- go format
 	},
 })
 require("mason-lspconfig").setup_handlers({
