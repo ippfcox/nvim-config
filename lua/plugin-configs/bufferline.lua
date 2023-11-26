@@ -1,4 +1,4 @@
-require("bufferline").setup {
+require("bufferline").setup({
     options = {
         diagnostics = "nvim_lsp",
         -- 留出nvim-tree的边栏空间
@@ -9,8 +9,8 @@ require("bufferline").setup {
                 highlight = "Directory",
                 text_align = "left",
                 separator = true,
-            }
+            },
         },
         color_icons = true,
-    }
-}
+    },
+})

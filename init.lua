@@ -1,4 +1,4 @@
-require('basic')
-require('plugins')
-require('keybindings')
-require('colorscheme')
+require("basic")
+require("plugins")
+require("keybindings")
+require("colorscheme")
