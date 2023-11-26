@@ -29,6 +29,8 @@ lua require('abc.123')
 
 o/bo/wo分别表示主要区域，buffer区域和窗口区域
 
+listchars主要用于将空白字符显示为想要的内容，如space:.，要注意的是tab要给出两个字符，第一个显示一次，第二个根据情况显示0-3次
+
 ## keybindings.lua
 
 插件会提供一些命令，而快捷键就是为了简化键入命令

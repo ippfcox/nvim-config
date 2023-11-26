@@ -1,4 +1,4 @@
-local util = require("formatter.util")
+-- local util = require("formatter.util")
 
 require("formatter").setup({
     logging = true,
@@ -6,24 +6,19 @@ require("formatter").setup({
     filetype = {
         lua = {
             require("formatter.filetypes.lua").stylua,
-            function()
-                if util.get_current_buffer_file_name() == "special.lua" then
-                    return nil
-                end
-
-                return {
-                    exe = "stylua",
-                    args = {
-                        "--search-parent-directories",
-                        "--indent-type=Spaces",
-                        "--stdin-filepath",
-                        util.escape_path(util.get_current_buffer_file_path()),
-                        "--",
-                        "-",
-                    },
-                    stdin = true,
-                }
-            end,
+        },
+        c = {
+            require("formatter.filetypes.c").clangformat,
+        },
+        cpp = {
+            require("formatter.filetypes.c").clangformat,
+        },
+        go = {
+            require("formatter.filetypes.go").gofmt,
+            require("formatter.filetypes.go").goimports,
+        },
+        ["*"] = {
+            require("formatter.filetypes.any").remove_trailing_whitespace,
         },
     },
 })

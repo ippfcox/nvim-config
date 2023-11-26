@@ -65,7 +65,7 @@ vim.o.splitright = true
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 不可见字符的显示
 vim.o.list = true
-vim.o.listchars = "space:·"
+vim.o.listchars = "space:·,tab:"
 -- 补全增强
 vim.o.wildmenu = true
 -- ?
