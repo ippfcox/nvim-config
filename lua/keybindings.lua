@@ -1,31 +1,32 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local map = vim.api.nvim_set_keymap
-local opt = { noremap = true, silent = true }
+local function opt(plugin_name, desc)
+	return { desc = plugin_name .. ": " .. desc, noremap = true, silent = true }
+end
 local plugin_keybindings = {}
 
 -- basic
-map("n", ";", ":", opt)
-map("n", "<leader>w", ":w<CR>", opt)
+vim.keymap.set("n", ";", ":", opt("basic", ":"))
+vim.keymap.set("n", "<leader>w", ":w<CR>", opt("basic", "Save"))
+vim.keymap.set("n", "<leader>q", ":q<CR>", opt("basic", "Quit"))
 
 -- nvim-tree
-map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
-map("n", "<A-h>", "<C-w>h", opt)
-map("n", "<A-j>", "<C-w>j", opt)
-map("n", "<A-k>", "<C-w>k", opt)
-map("n", "<A-l>", "<C-w>l", opt)
+vim.keymap.set("n", "<A-m>", ":NvimTreeToggle<CR>", opt("nvim-tree", "Toggle"))
+vim.keymap.set("n", "<A-h>", "<C-w>h", opt("nvim-tree", "Move to Left Window"))
+vim.keymap.set("n", "<A-j>", "<C-w>j", opt("nvim-tree", "Move to Down Window"))
+vim.keymap.set("n", "<A-k>", "<C-w>k", opt("nvim-tree", "Move to Up Window"))
+vim.keymap.set("n", "<A-l>", "<C-w>l", opt("nvim-tree", "Move to Right Window"))
 
 -- bufferline
-map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
--- map('n', '', ':BufferLineCloseOthers<CR>', opt)
-map("n", "<leader>c", ":Bdelete<CR>", opt)
-map("n", "<leader>q", ":q<CR>", opt)
+vim.keymap.set("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt("bufferline", "Move to Left Buffer"))
+vim.keymap.set("n", "<C-l>", ":BufferLineCycleNext<CR>", opt("bufferline", "Move to Right Buffer"))
+-- vim.keymap.set('n', '', ':BufferLineCloseOthers<CR>', opt("bufferline", "Close All Buffer"))
+vim.keymap.set("n", "<leader>c", ":Bdelete<CR>", opt("bufferline", "Close Current Buffer"))
 
 -- formatter
-map("n", "<Leader>f", ":Format<CR>", opt)
-map("n", "<Leader>F", ":FormatWrite<CR>", opt)
+vim.keymap.set("n", "<Leader>f", ":Format<CR>", opt("formatter", "Format"))
+vim.keymap.set("n", "<Leader>F", ":FormatWrite<CR>", opt("formatter", "Format and Write"))
 
 -- nvim-cmp
 plugin_keybindings.cmp = function(cmp)
@@ -55,14 +56,9 @@ end
 -- nvim-tree
 plugin_keybindings.tree = function(bufnr)
 	local api = require("nvim-tree.api")
-
-	local function opts(desc)
-		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-	end
-
 	api.config.mappings.default_on_attach(bufnr)
 
-	-- vim.keymap.set("n", "!", api.tree.toggle_help, opts("Help"))
+	-- vim.keymap.set("n", "!", api.tree.toggle_help, opt("Help"))
 end
 
 return plugin_keybindings
