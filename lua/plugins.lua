@@ -42,6 +42,7 @@ require("lazy").setup({
 	{ "famiu/bufdelete.nvim" }, -- delete buffer without messing layout up
 	{ "nvim-lualine/lualine.nvim" }, -- status line
 	{ "karb94/neoscroll.nvim" },
+	{ "lewis6991/gitsigns.nvim" },
 })
 
 -- nvim-tree config
@@ -64,5 +65,9 @@ require("plugin-configs.lualine")
 
 -- smooth scroll
 require("plugin-configs.neoscroll")
+
+-- git sign
+require("plugin-configs.gitsigns")
+
 -- lsp config
 require("lsp.setup")
