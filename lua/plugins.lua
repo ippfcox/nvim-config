@@ -41,9 +41,11 @@ require("lazy").setup({
 	{ "onsails/lspkind-nvim" }, -- code lsp style
 	{ "famiu/bufdelete.nvim" }, -- delete buffer without messing layout up
 	{ "nvim-lualine/lualine.nvim" }, -- status line
-	{ "karb94/neoscroll.nvim" },
-	{ "lewis6991/gitsigns.nvim" },
-	{ "lukas-reineke/indent-blankline.nvim" },
+	{ "karb94/neoscroll.nvim" }, -- for smooth scrolling
+	{ "lewis6991/gitsigns.nvim" }, -- for git signs
+	{ "lukas-reineke/indent-blankline.nvim" }, -- for indent indicator
+	{ "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- for error display
+	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
 })
 
 -- nvim-tree config
@@ -73,6 +75,9 @@ require("plugin-configs.gitsigns")
 -- confilct with tab vim.o.listchars
 -- indent blankline
 -- require("plugin-configs.indent-blankline")
+
+-- trouble for error/warning display
+require("plugin-configs.trouble")
 
 -- lsp config
 require("lsp.setup")

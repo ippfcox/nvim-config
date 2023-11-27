@@ -28,6 +28,15 @@ vim.keymap.set("n", "<leader>c", ":Bdelete<CR>", opt("bufferline", "Close Curren
 vim.keymap.set("n", "<Leader>f", ":Format<CR>", opt("formatter", "Format"))
 vim.keymap.set("n", "<Leader>F", ":FormatWrite<CR>", opt("formatter", "Format and Write"))
 
+-- trouble
+vim.keymap.set("n", "<leader>xx", require("trouble").toggle, opt("trouble", "Toggle Trouble"))
+
+-- telescope
+vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, opt("telescope", "Find Files"))
+vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, opt("telescope", "Live Grep"))
+vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, opt("telescope", "Buffers"))
+vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, opt("telescope", "Help Tags"))
+
 -- nvim-cmp
 plugin_keybindings.cmp = function(cmp)
 	return {
