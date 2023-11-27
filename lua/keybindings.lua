@@ -7,7 +7,7 @@ local plugin_keybindings = {}
 
 -- basic
 map("n", ";", ":", opt)
-map("n", "<leader>w", ":w", opt)
+map("n", "<leader>w", ":w<CR>", opt)
 
 -- nvim-tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
@@ -50,6 +50,19 @@ plugin_keybindings.cmp = function(cmp)
 		["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
 		["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
 	}
+end
+
+-- nvim-tree
+plugin_keybindings.tree = function(bufnr)
+	local api = require("nvim-tree.api")
+
+	local function opts(desc)
+		return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+	end
+
+	api.config.mappings.default_on_attach(bufnr)
+
+	-- vim.keymap.set("n", "!", api.tree.toggle_help, opts("Help"))
 end
 
 return plugin_keybindings

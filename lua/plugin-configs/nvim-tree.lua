@@ -13,4 +13,5 @@ require("nvim-tree").setup({
 	filters = {
 		-- dotfiles = true,
 	},
+	on_attach = require("keybindings").tree,
 })
