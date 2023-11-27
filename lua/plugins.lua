@@ -28,7 +28,7 @@ require("lazy").setup({
 	{ "mfussenegger/nvim-dap" },
 	{ "rcarriga/nvim-dap-ui" },
 	{ "mfussenegger/nvim-lint" },
-	{ "mhartington/formatter.nvim" },
+	{ "mhartington/formatter.nvim" }, -- code formatter
 	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" }, -- code highlight
 	{ "hrsh7th/cmp-nvim-lsp" }, -- { name = nvim_lsp }
 	{ "hrsh7th/cmp-buffer" }, -- { name = 'buffer' },
@@ -38,8 +38,9 @@ require("lazy").setup({
 	{ "hrsh7th/cmp-vsnip" }, -- { name = 'vsnip' }
 	{ "hrsh7th/vim-vsnip" },
 	{ "rafamadriz/friendly-snippets" },
-	{ "onsails/lspkind-nvim" },
-	{ "famiu/bufdelete.nvim" },
+	{ "onsails/lspkind-nvim" }, -- code lsp style
+	{ "famiu/bufdelete.nvim" }, -- delete buffer without messing layout up
+	{ "nvim-lualine/lualine.nvim" },
 })
 
 -- nvim-tree config
@@ -54,8 +55,10 @@ require("plugin-configs.nvim-treesitter")
 -- nvim-cmp config
 require("plugin-configs.nvim-cmp")
 
--- formatter
+-- formatter config
 require("plugin-configs.formatter")
 
+-- lualine status line config
+require("plugin-configs.lualine")
 -- lsp config
 require("lsp.setup")
