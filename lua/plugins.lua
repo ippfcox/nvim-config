@@ -46,6 +46,7 @@ require("lazy").setup({
 	{ "lukas-reineke/indent-blankline.nvim" }, -- for indent indicator
 	{ "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- for error display
 	{ "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+	{ "akinsho/toggleterm.nvim" },
 })
 
 -- nvim-tree config
@@ -78,6 +79,12 @@ require("plugin-configs.gitsigns")
 
 -- trouble for error/warning display
 require("plugin-configs.trouble")
+
+-- telescope
+require("plugin-configs.telescope")
+
+-- toggleterm for better terminal
+require("plugin-configs.toggleterm")
 
 -- lsp config
 require("lsp.setup")

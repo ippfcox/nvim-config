@@ -10,6 +10,7 @@ local plugin_keybindings = {}
 vim.keymap.set("n", ";", ":", opt("basic", ":"))
 vim.keymap.set("n", "<leader>w", ":w<CR>", opt("basic", "Save"))
 vim.keymap.set("n", "<leader>q", ":q<CR>", opt("basic", "Quit"))
+vim.keymap.set("t", "<ESC>", "<c-\\><c-n>", opt("basic", "Terminal to Normal"))
 
 -- nvim-tree
 vim.keymap.set("n", "<A-m>", ":NvimTreeToggle<CR>", opt("nvim-tree", "Toggle"))
@@ -36,6 +37,9 @@ vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, opt("
 vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, opt("telescope", "Live Grep"))
 vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, opt("telescope", "Buffers"))
 vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, opt("telescope", "Help Tags"))
+
+-- toggleterm
+vim.keymap.set("n", "<leader>`", ":ToggleTerm<CR>", opt("toggleterm", "Toggle Terminal"))
 
 -- nvim-cmp
 plugin_keybindings.cmp = function(cmp)
