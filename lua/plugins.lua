@@ -40,7 +40,8 @@ require("lazy").setup({
 	{ "rafamadriz/friendly-snippets" },
 	{ "onsails/lspkind-nvim" }, -- code lsp style
 	{ "famiu/bufdelete.nvim" }, -- delete buffer without messing layout up
-	{ "nvim-lualine/lualine.nvim" },
+	{ "nvim-lualine/lualine.nvim" }, -- status line
+	{ "karb94/neoscroll.nvim" },
 })
 
 -- nvim-tree config
@@ -60,5 +61,8 @@ require("plugin-configs.formatter")
 
 -- lualine status line config
 require("plugin-configs.lualine")
+
+-- smooth scroll
+require("plugin-configs.neoscroll")
 -- lsp config
 require("lsp.setup")
