@@ -43,6 +43,7 @@ require("lazy").setup({
 	{ "nvim-lualine/lualine.nvim" }, -- status line
 	{ "karb94/neoscroll.nvim" },
 	{ "lewis6991/gitsigns.nvim" },
+	{ "lukas-reineke/indent-blankline.nvim" },
 })
 
 -- nvim-tree config
@@ -68,6 +69,10 @@ require("plugin-configs.neoscroll")
 
 -- git sign
 require("plugin-configs.gitsigns")
+
+-- confilct with tab vim.o.listchars
+-- indent blankline
+-- require("plugin-configs.indent-blankline")
 
 -- lsp config
 require("lsp.setup")
