@@ -33,10 +33,10 @@ vim.keymap.set("n", "<Leader>F", ":FormatWrite<CR>", opt("formatter", "Format an
 vim.keymap.set("n", "<leader>xx", require("trouble").toggle, opt("trouble", "Toggle Trouble"))
 
 -- telescope
-vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files, opt("telescope", "Find Files"))
-vim.keymap.set("n", "<leader>fg", require("telescope.builtin").live_grep, opt("telescope", "Live Grep"))
-vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, opt("telescope", "Buffers"))
-vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, opt("telescope", "Help Tags"))
+vim.keymap.set("n", "<leader>tf", require("telescope.builtin").find_files, opt("telescope", "Find Files"))
+vim.keymap.set("n", "<leader>tg", require("telescope.builtin").live_grep, opt("telescope", "Live Grep"))
+vim.keymap.set("n", "<leader>tb", require("telescope.builtin").buffers, opt("telescope", "Buffers"))
+vim.keymap.set("n", "<leader>th", require("telescope.builtin").help_tags, opt("telescope", "Help Tags"))
 
 -- toggleterm
 vim.keymap.set("n", "<leader>``", ":ToggleTerm direction=horizontal<CR>", opt("toggleterm", "Toggle Terminal"))
