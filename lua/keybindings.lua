@@ -74,4 +74,21 @@ plugin_keybindings.tree = function(bufnr)
 	-- vim.keymap.set("n", "!", api.tree.toggle_help, opt("Help"))
 end
 
+-- comment
+plugin_keybindings.comment = {
+	toggler = {
+		line = "<leader>//",
+		block = "<leader>/b",
+	},
+	opleader = {
+		line = "<leader>//",
+		block = "<leader>/b",
+	},
+	extra = {
+		above = "<leader>/O",
+		below = "<leader>/o",
+		eol = "<leader>/A",
+	},
+}
+
 return plugin_keybindings
