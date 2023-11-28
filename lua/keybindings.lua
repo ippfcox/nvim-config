@@ -39,7 +39,8 @@ vim.keymap.set("n", "<leader>fb", require("telescope.builtin").buffers, opt("tel
 vim.keymap.set("n", "<leader>fh", require("telescope.builtin").help_tags, opt("telescope", "Help Tags"))
 
 -- toggleterm
-vim.keymap.set("n", "<leader>`", ":ToggleTerm<CR>", opt("toggleterm", "Toggle Terminal"))
+vim.keymap.set("n", "<leader>``", ":ToggleTerm direction=horizontal<CR>", opt("toggleterm", "Toggle Terminal"))
+vim.keymap.set("n", "<leader>`f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle Terminal"))
 
 -- nvim-cmp
 plugin_keybindings.cmp = function(cmp)
