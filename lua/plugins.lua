@@ -79,7 +79,8 @@ require("plugin-configs.gitsigns")
 -- require("plugin-configs.indent-blankline")
 
 -- trouble for error/warning display
-require("plugin-configs.trouble")
+-- no need to setup, maybe confugured by other plugin
+-- require("plugin-configs.trouble")
 
 -- telescope
 require("plugin-configs.telescope")
