@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local function opt(plugin_name, desc)
-	return { desc = plugin_name .. ": " .. desc, noremap = true, silent = true }
+  return { desc = plugin_name .. ": " .. desc, noremap = true, silent = true }
 end
 local plugin_keybindings = {}
 
@@ -44,52 +44,52 @@ vim.keymap.set("n", "<leader>`f", ":ToggleTerm direction=float<CR>", opt("toggle
 
 -- nvim-cmp
 plugin_keybindings.cmp = function(cmp)
-	return {
-		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			else
-				fallback()
-			end
-		end, { "i", "s" }),
-		["<S-Tab>"] = cmp.mapping(function()
-			if cmp.visible() then
-				cmp.select_prev_item()
-			end
-		end, { "i", "s" }),
-		["<C-k>"] = cmp.mapping.select_prev_item(),
-		["<C-j>"] = cmp.mapping.select_next_item(),
-		["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-		["<A-,>"] = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close() }),
-		["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
-		["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
-		["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-	}
+  return {
+    ["<Tab>"] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+    ["<S-Tab>"] = cmp.mapping(function()
+      if cmp.visible() then
+        cmp.select_prev_item()
+      end
+    end, { "i", "s" }),
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    ["<A-,>"] = cmp.mapping({ i = cmp.mapping.abort(), c = cmp.mapping.close() }),
+    ["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
+    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
+    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
+  }
 end
 
 -- nvim-tree
 plugin_keybindings.tree = function(bufnr)
-	local api = require("nvim-tree.api")
-	api.config.mappings.default_on_attach(bufnr)
+  local api = require("nvim-tree.api")
+  api.config.mappings.default_on_attach(bufnr)
 
-	-- vim.keymap.set("n", "!", api.tree.toggle_help, opt("Help"))
+  -- vim.keymap.set("n", "!", api.tree.toggle_help, opt("Help"))
 end
 
 -- comment
 plugin_keybindings.comment = {
-	toggler = {
-		line = "<leader>//",
-		block = "<leader>/b",
-	},
-	opleader = {
-		line = "<leader>//",
-		block = "<leader>/b",
-	},
-	extra = {
-		above = "<leader>/O",
-		below = "<leader>/o",
-		eol = "<leader>/A",
-	},
+  toggler = {
+    line = "<leader>//",
+    block = "<leader>/b",
+  },
+  opleader = {
+    line = "<leader>//",
+    block = "<leader>/b",
+  },
+  extra = {
+    above = "<leader>/O",
+    below = "<leader>/o",
+    eol = "<leader>/A",
+  },
 }
 
 return plugin_keybindings
