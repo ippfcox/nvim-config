@@ -48,6 +48,8 @@ require("lazy").setup({
   { "akinsho/toggleterm.nvim", config = require("plugin-configs.toggleterm").config },
   { "numToStr/Comment.nvim", config = require("plugin-configs.comment").config },
   { "nvimdev/dashboard-nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, event = "VimEnter", config = require("plugin-configs.dashboard-nvim").config },
+  { "folke/which-key.nvim", config = require("plugin-configs.which-key").config },
+  { "windwp/nvim-autopairs", config = require("plugin-configs.nvim-autopairs").config },
 })
 
 -- confilct with tab vim.o.listchars
