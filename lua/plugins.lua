@@ -59,4 +59,4 @@ require("lazy").setup({
 -- require("plugin-configs.trouble")
 
 -- lsp config
-require("lsp.setup")
+require("lsp.setup").config()

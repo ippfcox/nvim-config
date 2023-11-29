@@ -11,13 +11,26 @@ vim.keymap.set("n", ";", ":", opt("basic", ":"))
 vim.keymap.set("n", "<leader>w", ":w<CR>", opt("basic", "Save"))
 vim.keymap.set("n", "<leader>q", ":q<CR>", opt("basic", "Quit"))
 vim.keymap.set("t", "<ESC>", "<c-\\><c-n>", opt("basic", "Terminal to Normal"))
+vim.keymap.set("n", "<A-h>", "<C-w>h", opt("basic", "Move to Left Window"))
+vim.keymap.set("n", "<A-j>", "<C-w>j", opt("basic", "Move to Down Window"))
+vim.keymap.set("n", "<A-k>", "<C-w>k", opt("basic", "Move to Up Window"))
+vim.keymap.set("n", "<A-l>", "<C-w>l", opt("basic", "Move to Right Window"))
+
+-- lsp
+vim.keymap.set("n", "<leader>gh", vim.lsp.buf.hover, opt("lsp", "Hover"))
+vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opt("lsp", "Go to Definition"))
+vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, opt("lsp", "Go to Declaration"))
+vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, opt("lsp", "Go to Implementation"))
+vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, opt("lsp", "Go to References"))
+vim.keymap.set("n", "<leader>gn", vim.lsp.buf.rename, opt("lsp", "Rename"))
+vim.keymap.set("n", "<leader>ga", vim.lsp.buf.add_workspace_folder, opt("lsp", "Add Workspace Folder"))
+vim.keymap.set("n", "<leader>gr", vim.lsp.buf.remove_workspace_folder, opt("lsp", "Remove Workspace Folder"))
+vim.keymap.set("n", "<leader>gl", function()
+  print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+end, opt("lsp", "Rename"))
 
 -- nvim-tree
-vim.keymap.set("n", "<A-m>", ":NvimTreeToggle<CR>", opt("nvim-tree", "Toggle"))
-vim.keymap.set("n", "<A-h>", "<C-w>h", opt("nvim-tree", "Move to Left Window"))
-vim.keymap.set("n", "<A-j>", "<C-w>j", opt("nvim-tree", "Move to Down Window"))
-vim.keymap.set("n", "<A-k>", "<C-w>k", opt("nvim-tree", "Move to Up Window"))
-vim.keymap.set("n", "<A-l>", "<C-w>l", opt("nvim-tree", "Move to Right Window"))
+vim.keymap.set("n", "<A-m>", require("nvim-tree.api").tree.toggle, opt("nvim-tree", "Toggle"))
 
 -- bufferline
 vim.keymap.set("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt("bufferline", "Move to Left Buffer"))
