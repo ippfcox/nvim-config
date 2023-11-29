@@ -1,3 +1,4 @@
 .vscode
 test
 lazy-lock.json
+plugin-debug.lua

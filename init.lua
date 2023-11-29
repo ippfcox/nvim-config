@@ -1,3 +1,4 @@
+-- require("plugin-debug")
 require("basic")
 require("plugins")
 require("keybindings")

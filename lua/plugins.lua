@@ -42,11 +42,12 @@ require("lazy").setup({
   { "nvim-lualine/lualine.nvim", config = require("plugin-configs.lualine").config }, -- status line
   { "karb94/neoscroll.nvim", config = require("plugin-configs.neoscroll").config }, -- for smooth scrolling
   { "lewis6991/gitsigns.nvim", config = require("plugin-configs.gitsigns").config }, -- for git signs
-  { "lukas-reineke/indent-blankline.nvim", config = require("plugin-configs.indent-blankline").config }, -- for indent indicator
+  -- { "lukas-reineke/indent-blankline.nvim", config = require("plugin-configs.indent-blankline").config }, -- for indent indicator
   { "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } }, -- for error display
   { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }, config = require("plugin-configs.telescope").config },
   { "akinsho/toggleterm.nvim", config = require("plugin-configs.toggleterm").config },
   { "numToStr/Comment.nvim", config = require("plugin-configs.comment").config },
+  { "nvimdev/dashboard-nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, event = "VimEnter", config = require("plugin-configs.dashboard-nvim").config },
 })
 
 -- confilct with tab vim.o.listchars
