@@ -51,6 +51,7 @@ require("lazy").setup({
   { "nvimdev/dashboard-nvim", dependencies = { "nvim-tree/nvim-web-devicons" }, event = "VimEnter", config = require("plugin-configs.dashboard-nvim").config },
   { "folke/which-key.nvim", config = require("plugin-configs.which-key").config },
   { "windwp/nvim-autopairs", config = require("plugin-configs.nvim-autopairs").config },
+  { "WhoIsSethDaniel/mason-tool-installer.nvim", config = require("plugin-configs.mason-tool-installer").config },
 })
 
 -- confilct with tab vim.o.listchars

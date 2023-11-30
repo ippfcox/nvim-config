@@ -3,17 +3,8 @@ local M = {}
 function M.config()
   require("mason").setup({})
   require("mason-lspconfig").setup({
-    -- 先启用一些，会以默认配置启动
-    ensure_installed = {
-      "lua_ls", -- lua
-      -- "stylua", -- lua format
-      "bashls", -- bash
-      "clangd", -- c/cpp
-      -- "clang-format", -- c/cpp format
-      "cmake", -- cmake
-      "gopls", -- go
-      -- "goimports", -- go format
-    },
+    -- use mason-tool-installer to install
+    ensure_installed = {},
   })
   require("mason-lspconfig").setup_handlers({
     -- 处理默认的
