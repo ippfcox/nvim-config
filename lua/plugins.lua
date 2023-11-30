@@ -18,6 +18,7 @@ require("lazy").setup({
   { "ellisonleao/gruvbox.nvim", priority = 1000, config = true }, -- theme
   { "rmehri01/onenord.nvim", priority = 1000, config = true }, -- theme
   { "navarasu/onedark.nvim" },
+  { "folke/tokyonight.nvim", lazy = false, priority = 1000 },
 
   { "nvim-tree/nvim-tree.lua", priority = 1000, config = require("plugin-configs.nvim-tree").config }, -- file tree
   { "akinsho/bufferline.nvim", dependencies = "nvim-tree/nvim-web-devicons", config = require("plugin-configs.bufferline").config }, -- bufferline, file tab
