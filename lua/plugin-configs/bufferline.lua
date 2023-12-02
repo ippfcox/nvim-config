@@ -1,5 +1,9 @@
 local M = {}
 
+function M.dependicies()
+  return { "nvim-tree/nvim-web-devicons" }
+end
+
 function M.config()
   require("bufferline").setup({
     options = {
