@@ -62,6 +62,9 @@ vim.keymap.set("n", "<leader>th", require("telescope.builtin").help_tags, opt("t
 vim.keymap.set("n", "<leader>``", ":ToggleTerm direction=horizontal<CR>", opt("toggleterm", "Toggle Terminal"))
 vim.keymap.set("n", "<leader>`f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle Terminal"))
 
+-- aerial
+vim.keymap.set("n", "<leader>aa", require("plugin-configs.aerial").toggle_right, opt("aerial", "Toggle Aerial"))
+
 -- nvim-cmp
 plugin_keybindings.cmp = function(cmp)
   return {
