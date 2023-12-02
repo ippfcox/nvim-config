@@ -32,9 +32,7 @@ vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, opt("lsp", "Go to Refe
 vim.keymap.set("n", "<leader>gn", vim.lsp.buf.rename, opt("lsp", "Rename"))
 vim.keymap.set("n", "<leader>ga", vim.lsp.buf.add_workspace_folder, opt("lsp", "Add Workspace Folder"))
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.remove_workspace_folder, opt("lsp", "Remove Workspace Folder"))
-vim.keymap.set("n", "<leader>gl", function()
-  print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-end, opt("lsp", "Rename"))
+vim.keymap.set("n", "<leader>gl", require("lsp.setup").list_workspace_folders, opt("lsp", "List Workspace Folder"))
 
 -- nvim-tree
 vim.keymap.set("n", "<A-m>", require("nvim-tree.api").tree.toggle, opt("nvim-tree", "Toggle"))
@@ -60,7 +58,9 @@ vim.keymap.set("n", "<leader>th", require("telescope.builtin").help_tags, opt("t
 
 -- toggleterm
 vim.keymap.set("n", "<leader>``", ":ToggleTerm direction=horizontal<CR>", opt("toggleterm", "Toggle Terminal"))
+vim.keymap.set("n", "<leader><Esc><Esc>", ":ToggleTerm direction=horizontal<CR>", opt("toggleterm", "Toggle Terminal"))
 vim.keymap.set("n", "<leader>`f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle Terminal"))
+vim.keymap.set("n", "<leader><Esc>f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle Terminal"))
 
 -- aerial
 vim.keymap.set("n", "<leader>aa", require("plugin-configs.aerial").toggle_right, opt("aerial", "Toggle Aerial"))

@@ -1,5 +1,9 @@
 local M = {}
 
+function M.list_workspace_folders()
+  print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+end
+
 function M.config()
   require("mason").setup({})
   require("mason-lspconfig").setup({
