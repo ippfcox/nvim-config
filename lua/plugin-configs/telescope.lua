@@ -1,11 +1,15 @@
 local M = {}
 
-function M.denpenencies()
-  return { "nvim-tree/plenary.nvim" }
-end
-
 function M.config()
-  require("telescope").setup()
+  return {
+    {
+      "nvim-telescope/telescope.nvim",
+      dependencies = { "nvim-tree/plenary.nvim" },
+      config = function()
+        require("telescope").setup()
+      end,
+    },
+  }
 end
 
 return M

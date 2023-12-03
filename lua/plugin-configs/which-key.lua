@@ -1,7 +1,14 @@
 local M = {}
 
 function M.config()
-  require("which-key").setup()
+  return {
+    {
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup()
+      end,
+    },
+  }
 end
 
 return M

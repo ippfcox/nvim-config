@@ -1,13 +1,17 @@
 local M = {}
-
-function M.dependencies()
-  return { "nvim-tree/nvim-web-devicons" }
-end
-
 function M.config()
-  require("dashboard").setup({
-    theme = "hyper",
-  })
+  return {
+    {
+      "nvimdev/dashboard-nvim",
+      event = "VimEnter",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      config = function()
+        require("dashboard").setup({
+          theme = "hyper",
+        })
+      end,
+    },
+  }
 end
 
 return M

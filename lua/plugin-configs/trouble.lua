@@ -1,11 +1,13 @@
 local M = {}
 
-function M.dependencies()
-  return { "nvim-tree/nvim-web-devicons" }
-end
-
 function M.config()
-  require("trouble").setup()
+  return {
+    {
+      "folke/trouble.nvim",
+      dependencies = { "nvim-tree/nvim-web-devicons" },
+      config = true,
+    },
+  }
 end
 
 return M
