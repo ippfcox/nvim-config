@@ -1,7 +1,5 @@
 local M = {}
 
-function M.config()
-  require("ibl").setup()
-end
+M.config = {}
 
 return M

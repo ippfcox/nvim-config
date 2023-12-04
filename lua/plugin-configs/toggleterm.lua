@@ -1,14 +1,12 @@
 local M = {}
 
-function M.config()
-  return {
-    {
-      "akinsho/toggleterm.nvim",
-      config = function()
-        require("toggleterm").setup()
-      end,
-    },
-  }
-end
+M.config = {
+  {
+    "akinsho/toggleterm.nvim",
+    config = function()
+      require("toggleterm").setup()
+    end,
+  },
+}
 
 return M

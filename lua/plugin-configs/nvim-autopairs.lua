@@ -1,14 +1,12 @@
 local M = {}
 
-function M.config()
-  return {
-    {
-      "windwp/nvim-autopairs",
-      config = function()
-        require("nvim-autopairs").setup()
-      end,
-    },
-  }
-end
+M.config = {
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup()
+    end,
+  },
+}
 
 return M

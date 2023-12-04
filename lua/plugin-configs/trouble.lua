@@ -1,13 +1,11 @@
 local M = {}
 
-function M.config()
-  return {
-    {
-      "folke/trouble.nvim",
-      dependencies = { "nvim-tree/nvim-web-devicons" },
-      config = true,
-    },
-  }
-end
+M.config = {
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = true,
+  },
+}
 
 return M
