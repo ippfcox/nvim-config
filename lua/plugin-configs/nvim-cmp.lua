@@ -23,6 +23,7 @@ M.config = {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "vsnip" },
+          { name = "nvim_lsp_signature_help" },
         }, {
           { name = "buffer" },
           { name = "path" },
@@ -92,6 +93,9 @@ M.config = {
   },
   {
     "onsails/lspkind-nvim",
+  },
+  {
+    "hrsh7th/cmp-nvim-lsp-signature-help",
   },
 }
 
