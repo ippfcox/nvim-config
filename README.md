@@ -4,6 +4,14 @@ self-using nvim-config
 
 learning!
 
+## structure
+
+TODO
+
+- init.lua
+
+
+
 ## init.vim
 
 配置入口，用于引入lua脚本
@@ -79,4 +87,3 @@ p 粘贴
 
 :TSInstallInfo 查看安装信息
 :TSInstall xxx 安装某个高亮插件
-

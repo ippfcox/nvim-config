@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 -- plugins list
 require("lazy").setup(
   require("util.util").merge_arrays(
+    require("plugin-configs.debug").config,
     require("plugin-configs.colorscheme").config,
     require("plugin-configs.nvim-tree").config,
     require("plugin-configs.bufferline").config,
