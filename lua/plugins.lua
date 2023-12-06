@@ -35,6 +35,7 @@ require("lazy").setup(
     require("plugin-configs.nvim-autopairs").config,
     require("plugin-configs.mason-tool-installer").config,
     require("plugin-configs.aerial").config,
-    require("plugin-configs.nvim-scrollview").config
+    require("plugin-configs.nvim-scrollview").config,
+    {}
   )
 )
