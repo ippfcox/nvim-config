@@ -34,8 +34,8 @@ vim.o.smartcase = true -- 包含大写时准确搜索
 -- 搜索
 vim.o.hlsearch = true -- 高亮
 vim.o.incsearch = true -- 边输入边搜索
--- vim模式提示
-vim.o.showmode = true
+-- vim mode hint, lualine shows mode already
+vim.o.showmode = false
 -- vim命令行高度
 vim.o.cmdheight = 2
 -- 自动同步外部修改

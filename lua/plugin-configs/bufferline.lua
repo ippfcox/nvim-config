@@ -12,13 +12,14 @@ M.config = {
           offsets = {
             {
               filetype = "NvimTree",
-              text = "File Explorer",
+              text = " File Explorer",
               highlight = "Directory",
-              text_align = "left",
-              separator = true,
+              text_align = "center",
+              separator = false,
             },
           },
           color_icons = true,
+          separator_style = "slant",
         },
       })
     end,

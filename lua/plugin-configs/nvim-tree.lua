@@ -40,6 +40,16 @@ M.config = {
               -- default = icon_documents.Default,
               -- symlink = icon_documents.Symlink,
               -- bookmark = icon_documents.Bookrark,
+              -- [TODO) use global icons?
+              git = {
+                unstaged = "M",
+                staged = "A",
+                unmerged = "X",
+                renamed = "R",
+                untracked = "U",
+                deleted = "D",
+                ignored = "N",
+              },
             },
           },
         },

@@ -40,8 +40,10 @@ vim.keymap.set("n", "<A-m>", require("nvim-tree.api").tree.toggle, opt("nvim-tre
 -- bufferline
 vim.keymap.set("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt("bufferline", "Move to Left Buffer"))
 vim.keymap.set("n", "<C-l>", ":BufferLineCycleNext<CR>", opt("bufferline", "Move to Right Buffer"))
--- vim.keymap.set('n', '', ':BufferLineCloseOthers<CR>', opt("bufferline", "Close All Buffer"))
-vim.keymap.set("n", "<leader>c", ":Bdelete<CR>", opt("bufferline", "Close Current Buffer"))
+vim.keymap.set("n", "<leader>co", ":BufferLineCloseOthers<CR>", opt("bufferline", "Close Other Buffers"))
+vim.keymap.set("n", "<leader>cl", ":BufferLineCloseLeft<CR>", opt("bufferline", "Close Left Buffer"))
+vim.keymap.set("n", "<leader>cr", ":BufferLineCloseRight<CR>", opt("bufferline", "Close Right Buffer"))
+vim.keymap.set("n", "<leader>cc", ":Bdelete<CR>", opt("bufferline", "Close Current Buffer"))
 
 -- formatter
 vim.keymap.set("n", "<Leader>f", ":Format<CR>", opt("formatter", "Format"))
