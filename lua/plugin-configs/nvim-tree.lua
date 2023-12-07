@@ -3,7 +3,6 @@ local M = {}
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-local icon_documents = require("util.icon").get("documents", false)
 local icon_git = require("util.icon").get("git", false)
 
 M.config = {
@@ -37,18 +36,14 @@ M.config = {
           icons = {
             git_placement = "signcolumn",
             glyphs = {
-              -- default = icon_documents.Default,
-              -- symlink = icon_documents.Symlink,
-              -- bookmark = icon_documents.Bookrark,
-              -- [TODO) use global icons?
               git = {
-                unstaged = "M",
-                staged = "A",
-                unmerged = "X",
-                renamed = "R",
-                untracked = "U",
-                deleted = "D",
-                ignored = "",
+                unstaged = icon_git.Unstaged,
+                staged = icon_git.Staged,
+                unmerged = icon_git.Unmerged,
+                renamed = icon_git.Renamed,
+                untracked = icon_git.Untracked,
+                deleted = icon_git.Deleted,
+                ignored = icon_git.Ignored,
               },
             },
           },

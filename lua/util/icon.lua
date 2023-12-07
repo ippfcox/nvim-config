@@ -56,21 +56,15 @@ local data = {
     Symlink = "", --  nf-cod-file_symlink_file,  nf-cod-file_symlink_file
   },
   git = {
-    Add = "",
-    Branch = "",
-    Diff = "",
     Git = "", --  nf-dev-git
-    Ignore = "",
-    Mod = "M", --  nf-cod-diff_modified
-    Mod_alt = "",
-    Remove = "",
-    Rename = "",
     Repo = "", --  nf-cod-repo
-    Unmerged = "󰘬",
-    Untracked = "󰞋",
-    Unstaged = "",
-    Staged = "",
-    Conflict = "",
+    Unstaged = "M",
+    Staged = "A",
+    Unmerged = "X",
+    Renamed = "R",
+    Untracked = "U",
+    Deleted = "D",
+    Ignored = "",
   },
   ui = {
     Accepted = "",
@@ -134,11 +128,11 @@ local data = {
     Telescope = "",
   },
   diagnostics = {
-    Error = "", --  nf-cod-error
-    Warning = "", --  nf-cod-warning
-    Information = "", --  nf-cod-info
-    Question = "", --  nf-cod-question
-    Hint = "󰌵",
+    Error = "", --  nf-cod-error
+    Warning = "", --  nf-cod-warning
+    Information = "", --  nf-cod-info
+    Question = "", --  nf-cod-question
+    Hint = "", --  nf-fa-lightbulb_o
   },
   misc = {
     Campass = "󰀹",
