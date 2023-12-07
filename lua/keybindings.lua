@@ -67,6 +67,10 @@ vim.keymap.set("n", "<leader><Esc>f", ":ToggleTerm direction=float<CR>", opt("to
 -- aerial
 vim.keymap.set("n", "<leader>aa", require("plugin-configs.aerial").toggle_right, opt("aerial", "Toggle Aerial"))
 
+-- diffview
+vim.keymap.set("n", "<leader>dd", ":DiffviewOpen<CR>", opt("diffview", "Open DiffView"))
+vim.keymap.set("n", "<leader>dq", ":DiffviewClose<CR>", opt("diffview", "Close DiffView"))
+
 -- nvim-cmp
 plugin_keybindings.cmp = function(cmp)
   return {
@@ -116,5 +120,8 @@ plugin_keybindings.comment = {
     eol = "<leader>/A",
   },
 }
+
+-- diffview
+plugin_keybindings.diffview = {}
 
 return plugin_keybindings

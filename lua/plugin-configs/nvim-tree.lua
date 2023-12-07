@@ -48,7 +48,7 @@ M.config = {
                 renamed = "R",
                 untracked = "U",
                 deleted = "D",
-                ignored = "N",
+                ignored = "",
               },
             },
           },
