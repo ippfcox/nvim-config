@@ -30,9 +30,9 @@ vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, opt("lsp", "Go to Dec
 vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, opt("lsp", "Go to Implementation"))
 vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, opt("lsp", "Go to References"))
 vim.keymap.set("n", "<leader>gn", vim.lsp.buf.rename, opt("lsp", "Rename"))
-vim.keymap.set("n", "<leader>ga", vim.lsp.buf.add_workspace_folder, opt("lsp", "Add Workspace Folder"))
-vim.keymap.set("n", "<leader>gr", vim.lsp.buf.remove_workspace_folder, opt("lsp", "Remove Workspace Folder"))
-vim.keymap.set("n", "<leader>gl", require("plugin-configs.lsp").list_workspace_folders, opt("lsp", "List Workspace Folder"))
+vim.keymap.set("n", "<leader>gA", vim.lsp.buf.add_workspace_folder, opt("lsp", "Add Workspace Folder"))
+vim.keymap.set("n", "<leader>gR", vim.lsp.buf.remove_workspace_folder, opt("lsp", "Remove Workspace Folder"))
+vim.keymap.set("n", "<leader>gL", require("plugin-configs.lsp").list_workspace_folders, opt("lsp", "List Workspace Folder"))
 
 -- nvim-tree
 vim.keymap.set("n", "<A-m>", require("nvim-tree.api").tree.toggle, opt("nvim-tree", "Toggle"))
