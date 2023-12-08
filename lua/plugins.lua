@@ -37,6 +37,7 @@ require("lazy").setup(
     require("plugin-configs.aerial").config,
     require("plugin-configs.nvim-scrollview").config,
     require("plugin-configs.diffview").config,
+    require("plugin-configs.git-blame").config,
     {}
   )
 )
