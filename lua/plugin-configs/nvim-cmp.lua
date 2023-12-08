@@ -26,6 +26,7 @@ M.config = {
           { name = "nvim_lsp" },
           { name = "vsnip" },
           { name = "nvim_lsp_signature_help" },
+          { name = "luasnip" },
         }, {
           { name = "buffer" },
           { name = "path" },
@@ -125,10 +126,16 @@ M.config = {
     "hrsh7th/cmp-cmdline",
   },
   {
+    "hrsh7th/cmp-calc",
+  },
+  {
     "hrsh7th/cmp-vsnip",
   },
   {
     "hrsh7th/vim-vsnip",
+  },
+  {
+    "hrsh7th/cmp-nvim-lsp-signature-help",
   },
   {
     "rafamadriz/friendly-snippets",
@@ -137,7 +144,7 @@ M.config = {
     "onsails/lspkind-nvim",
   },
   {
-    "hrsh7th/cmp-nvim-lsp-signature-help",
+    "saadparwaiz1/cmp_luasnip",
   },
 }
 
