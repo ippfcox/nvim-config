@@ -39,6 +39,7 @@ require("lazy").setup(
     require("plugin-configs.pc-diffview").config,
     require("plugin-configs.pc-git-blame").config,
     require("plugin-configs.pc-auto-session").config,
+    require("plugin-configs.pc-vim-illuminate").config,
     {}
   )
 )
