@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, opt("lsp", "Go to Refe
 vim.keymap.set("n", "<leader>gn", vim.lsp.buf.rename, opt("lsp", "Rename"))
 vim.keymap.set("n", "<leader>gA", vim.lsp.buf.add_workspace_folder, opt("lsp", "Add Workspace Folder"))
 vim.keymap.set("n", "<leader>gR", vim.lsp.buf.remove_workspace_folder, opt("lsp", "Remove Workspace Folder"))
-vim.keymap.set("n", "<leader>gL", require("plugin-configs.lsp").list_workspace_folders, opt("lsp", "List Workspace Folder"))
+vim.keymap.set("n", "<leader>gL", require("plugin-configs.pc-lsp").list_workspace_folders, opt("lsp", "List Workspace Folder"))
 
 -- nvim-tree
 vim.keymap.set("n", "<A-m>", require("nvim-tree.api").tree.toggle, opt("nvim-tree", "Toggle"))
@@ -65,7 +65,7 @@ vim.keymap.set("n", "<leader>`f", ":ToggleTerm direction=float<CR>", opt("toggle
 vim.keymap.set("n", "<leader><Esc>f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle Terminal"))
 
 -- aerial
-vim.keymap.set("n", "<leader>aa", require("plugin-configs.aerial").toggle_right, opt("aerial", "Toggle Aerial"))
+vim.keymap.set("n", "<leader>aa", require("plugin-configs.pc-aerial").toggle_right, opt("aerial", "Toggle Aerial"))
 
 -- diffview
 vim.keymap.set("n", "<leader>dd", ":DiffviewOpen<CR>", opt("diffview", "Open DiffView"))
