@@ -15,6 +15,7 @@ M.config = {
           "cmake", -- cmake
           "gopls", -- go
           "goimports", -- go format
+          "marksman", -- markdown
         },
       })
     end,

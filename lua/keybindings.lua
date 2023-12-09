@@ -7,13 +7,12 @@ end
 local plugin_keybindings = {}
 
 -- basic
-vim.keymap.set("n", ";", ":", opt("basic", ":"))
-vim.keymap.set("n", "<leader>w", ":w<CR>", opt("basic", "Save"))
-vim.keymap.set("n", "<leader>q", ":q<CR>", opt("basic", "Quit"))
+vim.keymap.set("n", "<leader>w", ":w<CR>", opt("basic", "Write File"))
+vim.keymap.set("n", "<leader>q", ":q<CR>", opt("basic", "Quit a Window"))
 vim.keymap.set("t", "<ESC>", "<c-\\><c-n>", opt("basic", "Terminal to Normal"))
 vim.keymap.set("n", "<A-h>", "<C-w>h", opt("basic", "Go to Left Window"))
-vim.keymap.set("n", "<A-j>", "<C-w>j", opt("basic", "Go to Down Window"))
-vim.keymap.set("n", "<A-k>", "<C-w>k", opt("basic", "Go to Up Window"))
+vim.keymap.set("n", "<A-j>", "<C-w>j", opt("basic", "Go to Lower Window"))
+vim.keymap.set("n", "<A-k>", "<C-w>k", opt("basic", "Go to Upper Window"))
 vim.keymap.set("n", "<A-l>", "<C-w>l", opt("basic", "Go to Right Window"))
 vim.keymap.set("n", "<A-q>", "<C-w>q", opt("basic", "Quit a Window"))
 vim.keymap.set("n", "<A-s>", "<C-w>s", opt("basic", "Split Window"))
@@ -38,11 +37,11 @@ vim.keymap.set("n", "<leader>gL", require("plugin-configs.pc-lsp").list_workspac
 vim.keymap.set("n", "<A-m>", require("nvim-tree.api").tree.toggle, opt("nvim-tree", "Toggle"))
 
 -- bufferline
-vim.keymap.set("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt("bufferline", "Move to Left Buffer"))
-vim.keymap.set("n", "<C-l>", ":BufferLineCycleNext<CR>", opt("bufferline", "Move to Right Buffer"))
+vim.keymap.set("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt("bufferline", "Go to Left Buffer"))
+vim.keymap.set("n", "<C-l>", ":BufferLineCycleNext<CR>", opt("bufferline", "Go to Right Buffer"))
 vim.keymap.set("n", "<leader>co", ":BufferLineCloseOthers<CR>", opt("bufferline", "Close Other Buffers"))
-vim.keymap.set("n", "<leader>cl", ":BufferLineCloseLeft<CR>", opt("bufferline", "Close Left Buffer"))
-vim.keymap.set("n", "<leader>cr", ":BufferLineCloseRight<CR>", opt("bufferline", "Close Right Buffer"))
+vim.keymap.set("n", "<leader>ch", ":BufferLineCloseLeft<CR>", opt("bufferline", "Close Left Buffer"))
+vim.keymap.set("n", "<leader>cl", ":BufferLineCloseRight<CR>", opt("bufferline", "Close Right Buffer"))
 vim.keymap.set("n", "<leader>cc", ":Bdelete<CR>", opt("bufferline", "Close Current Buffer"))
 
 -- formatter
@@ -59,10 +58,10 @@ vim.keymap.set("n", "<leader>tb", require("telescope.builtin").buffers, opt("tel
 vim.keymap.set("n", "<leader>th", require("telescope.builtin").help_tags, opt("telescope", "Help Tags"))
 
 -- toggleterm
-vim.keymap.set("n", "<leader>``", ":ToggleTerm direction=horizontal<CR>", opt("toggleterm", "Toggle Terminal"))
-vim.keymap.set("n", "<leader><Esc><Esc>", ":ToggleTerm direction=horizontal<CR>", opt("toggleterm", "Toggle Terminal"))
-vim.keymap.set("n", "<leader>`f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle Terminal"))
-vim.keymap.set("n", "<leader><Esc>f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle Terminal"))
+vim.keymap.set("n", "<leader>``", ":ToggleTerm direction=horizontal<CR>", opt("toggleterm", "Toggle a Horizontal Terminal"))
+vim.keymap.set("n", "<leader><Esc><Esc>", ":ToggleTerm direction=horizontal<CR>", opt("toggleterm", "Toggle Horizontal Terminal"))
+vim.keymap.set("n", "<leader>`f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle a Float Terminal"))
+vim.keymap.set("n", "<leader><Esc>f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle a Float Terminal"))
 
 -- aerial
 vim.keymap.set("n", "<leader>aa", require("plugin-configs.pc-aerial").toggle_right, opt("aerial", "Toggle Aerial"))
