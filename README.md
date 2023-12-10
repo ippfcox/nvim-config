@@ -6,17 +6,18 @@ learning!
 
 ## keybindings
 
-`+` means combination keys, `-` means sequese keys
+- `+` means combination keys
+- `-` means sequese keys
 
 Common
 
-- Normal <Space>-w (:w-<CR>) Write File
-- Normal <Space>-q (:q-<CR>) Quit a Window
+- Normal `<Space>`-`w` (`:w-<CR>`) Write File
+- Normal `<Space>`-`q` (`:q-<CR>`) Quit a Window
 
 Terminal
 
-- Terminal <Esc> (<Ctrl>+\-<Ctrl+n>) Terminal to Normal
-- Normal <Space>-`-` (:ToggleTerm direction=horizontal-<CR>) Toggle a Horizontal Terminal
+- Terminal `<Esc>` (`<Ctrl>`+`\`-`<Ctrl>`+`n`) Terminal to Normal
+- Normal `<Space>`-`\``-`\`` (`:ToggleTerm direction=horizontal-<CR>) Toggle a Horizontal Terminal
 - Normal <Space>-<Esc>-<Esc> (:ToggleTerm direction=horizontal-<CR>) Toggle a Horizontal Terminal
 - Normal <Space>-`-f (:ToggleTerm direction=float-<CR>) Toggle a Float Terminal
 - Normal <Space>-<Esc>-f (:ToggleTerm direction=float-<CR>) Toggle a Float Terminal
