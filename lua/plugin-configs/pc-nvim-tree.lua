@@ -3,7 +3,8 @@ local M = {}
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-local icon_git = require("util.icon").get("git", false)
+
+local icon = require("util.icon").icon(false)
 
 M.config = {
   {
@@ -37,13 +38,13 @@ M.config = {
             git_placement = "signcolumn",
             glyphs = {
               git = {
-                unstaged = icon_git.Unstaged,
-                staged = icon_git.Staged,
-                unmerged = icon_git.Unmerged,
-                renamed = icon_git.Renamed,
-                untracked = icon_git.Untracked,
-                deleted = icon_git.Deleted,
-                ignored = icon_git.Ignored,
+                unstaged = icon.Unstaged,
+                staged = icon.Added,
+                unmerged = icon.Unmerged,
+                renamed = icon.Renamed,
+                untracked = icon.Untracked,
+                deleted = icon.Removed,
+                ignored = icon.Ignored,
               },
             },
           },
