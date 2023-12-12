@@ -6,7 +6,7 @@ vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
 -- 行号
 vim.wo.number = true
-vim.wo.relativenumber = false -- 相对行号
+vim.wo.relativenumber = true
 -- 高亮
 vim.wo.cursorline = true
 -- 左侧图标指示列
