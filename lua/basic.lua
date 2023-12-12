@@ -2,13 +2,13 @@
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
 --
-vim.o.scrolloff = 8
-vim.o.sidescrolloff = 8
+vim.o.scrolloff = 2
+vim.o.sidescrolloff = 2
 -- 行号
 vim.wo.number = true
 vim.wo.relativenumber = true
 -- 高亮
-vim.wo.cursorline = true
+vim.wo.cursorline = false
 -- 左侧图标指示列
 vim.wo.signcolumn = "yes"
 -- 右侧参考线
