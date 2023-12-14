@@ -11,7 +11,6 @@ learning!
 
 ### Vanilla VIM
 
-
 | Mode   | Key                               | Description                                                          |
 | ------ | --------------------------------- | -------------------------------------------------------------------- |
 | NORMAL | `i`                               | enter INSERT mode                                                    |
@@ -24,6 +23,18 @@ learning!
 | NORMAL | `S`                               | delete cursor line, enter INSERT mode                                |
 | NORMAL | `c`+                              | delete specific range, enter INSERT mode                             |
 | NORMAL | `C`                               | delete content after cursor, enter INSERT mode                       |
+| NORMAL | `R`                               | enter REPLACE mode                                                   |
+| NORMAL | `gR`                              | enter V-REPLACE mode, better tab behavier                            |
+| NORMAL | `r`                               | replace a character                                                  |
+| NORMAL | `gr`                              | replace a character, simllar with `gR`                               |
+| NORMAL | `v`                               | enter VISUAL mode, character mode                                    |
+| NORMAL | `V`                               | enter VISUAL-LINE mode, line mode                                    |
+| NORMAL | `<Ctrl>`+`v`                      | enter VISUAL-BLOCK mode, block mode                                  |
+| VISUAL | `<Ctrl>`+`g`                      | enter SELECT mode, delete selected content and insert                |
+| VISUAL | `o`                               | adjust selected content                                              |
+| NORMAL | `gv`                              | re-select last selection                                             |
+| VISUAL | `u`                               | change selected content to lower                                     |
+| VISUAL | `U`                               | change selected content to upper                                     |
 | INSERT | `<Ctrl>`+`h`                      | backspace                                                            |
 | INSERT | `<Ctrl>`+`w`                      | backspace a word                                                     |
 | INSERT | `<Ctrl>`+`u`                      | backspace to SOL                                                     |
@@ -31,8 +42,44 @@ learning!
 | INSERT | `<Ctrl>`+`o`                      | enter NORMAL mode temporarily, return to INSERT mode after 1 command |
 | INSERT | `<Ctrl>`+`v`                      | input character, number for ascii or u+hex for unicode               |
 | INSERT | `<Ctrl>`+`k`                      | input digraph character(see :h digraph-table)                        |
+| NORMAL | `:`                               | enter COMMAND mode                                                   |
 
 - `ciw`: delete 1 cursor word, enter INSERT mode, see Range 
+- `<Ctrl>`+`v` 65 == A
+- `<Ctrl>`+`v` ue70e == 
+- `<Ctrl>`+`k` 12 == ½
+
+Command
+
+| Command                                | Short  | Description                          |
+| -------------------------------------- | ------ | ------------------------------------ |
+| range`print`                           | `p`    | print                                |
+| range`delete` x                        | `d`    | delete content in range to x         |
+| range`yank` x                          | `y`    | copy content in range to x           |
+| line`put` x                            | `pu`   | paste x after line                   |
+| range`copy` address                    | `t`    | copy content in range to address     |
+| range`move` address                    | `m`    | move content in range to address     |
+| range`join`                            | `j`    | join lines in range                  |
+| range`normal` commands                 | `narm` | run commands for content in range    |
+| range`substitute`/pattern/string/flags | `s`    | replace pattern in range with string |
+| range`global`/pattern/cmd              | `g`    | run cmd for pattern in range         |
+
+| Symbol | Description                    |
+| ------ | ------------------------------ |
+| `.`    | current line                   |
+| `$`    | EOF                            |
+| `0`    | virtual line before line 1     |
+| `1`    | 1st line                       |
+| `'m`   | line include mark `m`          |
+| `<`    | start line of highlighted area |
+| `>`    | end line of highlighted area   |
+| `%`    | whole file, 1,$                |
+
+- `55print`: print line 55
+- `3,5d`: delete line 3/4/5
+- `.,5d`: delete current to line 5
+- `%d`: delete whole file
+- `4,$-3d`: delete except start 3 and end 3 lines
 
 Move Cursor
 
@@ -138,11 +185,9 @@ Others
 - Number + `gg` == Number + `G`: jump to specific line
 - `.`: repeat last operation
   - enter INSERT mode to enter NORMAL mode
-  - one command in NORMAL mode 
+  - one command in NORMAL mode
+- `2,$normal.`: run `.` from 2 to EOF 
 - `2u` == `uu`: cancel twice
-
-
-aa  137 lkjlj  124 
 
 ### Common
 
