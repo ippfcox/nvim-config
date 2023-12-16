@@ -45,6 +45,7 @@ learning!
 | INSERT | `<Ctrl>`+`v`                      | 通过输入数字输入ASCII字符或通过输入u16进制数输入unicode字符 |
 | INSERT | `<Ctrl>`+`k`                      | 输入digraph字符(参见`:h digraph-table`)                     |
 | NORMAL | `:`                               | 进入命令模式                                                |
+| NORMAL | `<Ctrl>`+`^`                      | 切换上一次激活的缓冲区                                      |
 
 例子
 
@@ -85,26 +86,60 @@ learning!
 
 #### 命令
 
-| 命令                                   | 简写   | 描述                              |
-| -------------------------------------- | ------ | --------------------------------- |
-| range`print`                           | `p`    | 打印范围内容                      |
-| range`delete` x                        | `d`    | 删除范围内容，保存到x             |
-| range`yank` x                          | `y`    | 复制范围内容，保存到x             |
-| line`put` x                            | `pu`   | 粘贴x内容到line后                 |
-| range`copy` address                    | `t`    | 复制范围内容到address             |
-| range`move` address                    | `m`    | 移动范围内容到address             |
-| range`join`                            | `j`    | 连接范围内容到一行                |
-| range`normal` commands                 | `narm` | 对范围内容执行命令                |
-| range`substitute`/pattern/string/flags | `s`    | 对范围匹配pattern内容替换为string |
-| range`global`/pattern/cmd              | `g`    | 对范围匹配pattern内容执行cmd      |
+| 命令                                   | 简写   | 描述                                               |
+| -------------------------------------- | ------ | -------------------------------------------------- |
+| range`print`                           | `p`    | 打印范围内容                                       |
+| range`delete` x                        | `d`    | 删除范围内容，保存到x                              |
+| range`yank` x                          | `y`    | 复制范围内容，保存到x                              |
+| line`put` x                            | `pu`   | 粘贴x内容到line后                                  |
+| range`copy` address                    | `t`    | 复制范围内容到address                              |
+| range`move` address                    | `m`    | 移动范围内容到address                              |
+| range`join`                            | `j`    | 连接范围内容到一行                                 |
+| range`normal` commands                 | `narm` | 对范围内容执行命令                                 |
+| range`substitute`/pattern/string/flags | `s`    | 对范围匹配pattern内容替换为string                  |
+| range`global`/pattern/cmd              | `g`    | 对范围匹配pattern内容执行cmd                       |
+| `@:`                                   |        | 执行上一个命令（测试失败）                         |
+| `@@`                                   |        | 执行上一个经过`@:`执行过的命令（测试失败）         |
+| range`!`shell                          |        | 执行shell命令                                      |
+| `read !`shell                          |        | 读取shell输出到缓冲区                              |
+| range`write !`shell                    |        | 将缓冲区内容作为shell命令输入                      |
+| `ls`                                   |        | 打印当前缓冲区列表                                 |
+| `bnext`                                |        | 切换到下一个缓冲区                                 |
+| `bprev`                                |        | 切换到上一个缓冲区                                 |
+| `bfirst`                               |        | 切换到第一个缓冲区                                 |
+| `blast`                                |        | 切换到最后一个缓冲区                               |
+| `buffer` bufferno                      |        | 切换到bufferno指定的buffer                         |
+| `buffer` buffername                    |        | 切换到buffername对应的buffer                       |
+| `bdelete`                              |        | 删除当前buffer                                     |
+| `bdelete` bufferno                     |        | 删除bufferno指定的buffer                           |
+| `bdelete` buffername                   |        | 删除buffername对应的buffer                         |
+| range`bdelete`                         |        | 删除range指定的所有buffer                          |
+| `args`                                 |        | 启动参数对应的buffer列表                           |
+| `args` \`shell\`                       |        | 将shell命令结果作为参数                            |
+| `args` files                           |        | 将文件作为参数，支持通配符                         |
+| `tabedit` filename                     |        | 新建标签页并进行编辑（不要用）                     |
+| `tabnew` filename                      |        | 新建标签页并进行编辑，与tabedit一样（不要用）      |
+| `<Ctrl>`+`w`-T                         |        | 将当前窗口加入标签页（不要用）                     |
+| `tabclose`                             | `tabc` | 关闭当前标签页（不要用）                           |
+| `tabonly`                              | `tabo` | 关闭当前标签页以外的标签页（不要用）               |
+| `tabnext`                              | `gt`   | 切换到下一标签页（不要用）                         |
+| `tabprevious`                          | `gT`   | 切换到下一标签页（不要用）                         |
+| `tabmove` number                       |        | 移动当前标签页到number前面（不要用）               |
+| `edit` filename                        | `e`    | 打开文件，可以用`%`表示当前文件，`%:h`表示当前目录 |
+| `find` filename                        |        | 从`path`中的路径中查找文件并打开                   |
+| `Explore`                              | `E`    | 打开当前目录（测试失败）                           |
+| `Sexplore`                             |        | 水平方向拆分打开当前目录（测试失败）               |
+| `Vexplore`                             |        | 垂直方向拆分打开当前目录（测试失败）               |
+
 
 - `55print`: 打印第55行
 - `3,5d`: 删除第3/4/5行
 - `.,5d`: 删除当前行到第5行
 - `%d`: 删除整个文件
 - `4,$-3d`: 删除第3行到倒数第3行
+- `2,$!sort`: 对第2行到末尾进行排序
 
-移动光标
+#### 移动光标和操作
 
 | 模式   | 按键 | 描述                                 |
 | ------ | ---- | ------------------------------------ |
@@ -173,7 +208,7 @@ learning!
 - `ciw`: 清空一个单词，进入INSERT模式
 - `dip`: 删除一段
 
-其它
+#### 其它
 
 | 模式   | 按键         | 描述                         |
 | ------ | ------------ | ---------------------------- |
@@ -197,6 +232,7 @@ learning!
   - NORMAL模式下的一个命令
 - `2,$normal.`: 对第2行到最后一行执行`.`
 - `2u` == `uu`: 撤销2次
+- `.m.+1`: 移动当前行到下一行
 
 ### Common
 
