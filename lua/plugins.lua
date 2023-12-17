@@ -37,7 +37,6 @@ require("lazy").setup(
     require("plugin-configs.pc-aerial").config,
     require("plugin-configs.pc-nvim-scrollview").config,
     require("plugin-configs.pc-diffview").config,
-    require("plugin-configs.pc-git-blame").config,
     require("plugin-configs.pc-auto-session").config,
     require("plugin-configs.pc-vim-illuminate").config,
     require("plugin-configs.pc-dropbar").config,
