@@ -35,12 +35,12 @@ require("lazy").setup(
     require("plugin-configs.pc-nvim-autopairs").config,
     require("plugin-configs.pc-mason-tool-installer").config,
     require("plugin-configs.pc-aerial").config,
-    require("plugin-configs.pc-nvim-scrollview").config,
     require("plugin-configs.pc-diffview").config,
     require("plugin-configs.pc-auto-session").config,
     require("plugin-configs.pc-vim-illuminate").config,
     require("plugin-configs.pc-dropbar").config,
     require("plugin-configs.pc-markdown-preview").config,
+    require("plugin-configs.pc-satellite").config,
     {}
   )
 )
