@@ -20,6 +20,12 @@ end
 
 M.config = {
   {
+    "folke/neodev.nvim",
+    config = function()
+      require("neodev").setup({})
+    end,
+  },
+  {
     "neovim/nvim-lspconfig",
   },
   {
