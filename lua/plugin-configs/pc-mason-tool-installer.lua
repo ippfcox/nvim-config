@@ -16,6 +16,8 @@ M.config = {
           "gopls", -- go
           "goimports", -- go format
           "marksman", -- markdown
+          "html-lsp",
+          "htmlbeautifier",
         },
       })
     end,

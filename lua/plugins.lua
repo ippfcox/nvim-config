@@ -19,7 +19,6 @@ require("lazy").setup(require("util.util").merge_arrays(
   require("plugin-configs.pc-nvim-tree").config,
   require("plugin-configs.pc-bufferline").config,
   require("plugin-configs.pc-lsp").config,
-  require("plugin-configs.pc-formatter").config,
   require("plugin-configs.pc-nvim-treesitter").config,
   require("plugin-configs.pc-nvim-cmp").config,
   require("plugin-configs.pc-lualine").config,
@@ -40,5 +39,6 @@ require("lazy").setup(require("util.util").merge_arrays(
   require("plugin-configs.pc-markdown-preview").config,
   require("plugin-configs.pc-satellite").config,
   require("plugin-configs.pc-outline").config,
+  require("plugin-configs.pc-conform").config,
   {}
 ))

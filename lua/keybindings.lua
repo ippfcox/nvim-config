@@ -45,8 +45,7 @@ vim.keymap.set("n", "<leader>cl", ":BufferLineCloseRight<CR>", opt("bufferline",
 vim.keymap.set("n", "<leader>cc", ":Bdelete<CR>", opt("bufferline", "Close Current Buffer"))
 
 -- formatter
-vim.keymap.set("n", "<Leader>f", ":Format<CR>", opt("formatter", "Format"))
-vim.keymap.set("n", "<Leader>F", ":FormatWrite<CR>", opt("formatter", "Format and Write"))
+vim.keymap.set("n", "<leader>f", require("conform").format, opt("conform", "Format"))
 
 -- trouble
 vim.keymap.set("n", "<leader>xx", require("trouble").toggle, opt("trouble", "Toggle Trouble"))
