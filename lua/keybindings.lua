@@ -63,9 +63,6 @@ vim.keymap.set("n", "<leader><Esc><Esc>", ":ToggleTerm direction=horizontal<CR>"
 vim.keymap.set("n", "<leader>`f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle a Float Terminal"))
 vim.keymap.set("n", "<leader><Esc>f", ":ToggleTerm direction=float<CR>", opt("toggleterm", "Toggle a Float Terminal"))
 
--- aerial
-vim.keymap.set("n", "<leader>aa", require("plugin-configs.pc-aerial").toggle_right, opt("aerial", "Toggle Aerial"))
-
 -- diffview
 vim.keymap.set("n", "<leader>dd", ":DiffviewOpen<CR>", opt("diffview", "Open DiffView"))
 vim.keymap.set("n", "<leader>dq", ":DiffviewClose<CR>", opt("diffview", "Close DiffView"))
@@ -122,5 +119,10 @@ plugin_keybindings.comment = {
 
 -- diffview
 plugin_keybindings.diffview = {}
+
+-- symbol_outline
+vim.keymap.set("n", "<leader>oo", require("outline").toggle, opt("outline", "Toggle Outline"))
+
+plugin_keybindings.symbol_outline = {}
 
 return plugin_keybindings
