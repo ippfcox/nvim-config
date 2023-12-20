@@ -21,12 +21,13 @@ end
 M.config = {
   {
     "folke/neodev.nvim",
-    config = function()
-      require("neodev").setup({})
-    end,
   },
   {
     "neovim/nvim-lspconfig",
+    -- put this here to ensure neodev to setup before lspconfig
+    config = function()
+      require("neodev").setup()
+    end,
   },
   {
     "williamboman/mason.nvim",
