@@ -4,7 +4,17 @@ M.config = {
   {
     "stevearc/dressing.nvim",
     config = function()
-      require("dressing").setup({})
+      require("dressing").setup({
+        input = {
+          border = "single",
+        },
+        nui = {
+          border = "single",
+        },
+        builtin = {
+          border = "single",
+        },
+      })
     end,
   },
 }
