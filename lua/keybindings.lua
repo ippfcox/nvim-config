@@ -67,6 +67,9 @@ vim.keymap.set("n", "<leader><Esc>f", ":ToggleTerm direction=float<CR>", opt("to
 vim.keymap.set("n", "<leader>dd", ":DiffviewOpen<CR>", opt("diffview", "Open DiffView"))
 vim.keymap.set("n", "<leader>dq", ":DiffviewClose<CR>", opt("diffview", "Close DiffView"))
 
+-- session-lens
+vim.keymap.set("n", "<leader>ss", require("session-lens").search_session, opt("session-lens", "Search Session"))
+
 -- nvim-cmp
 plugin_keybindings.cmp = function(cmp)
   return {
