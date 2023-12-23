@@ -42,7 +42,7 @@ require("lazy").setup(
     require("plugin-configs.pc-outline").config,
     require("plugin-configs.pc-conform").config,
     require("plugin-configs.pc-dressing").config,
-    require("plugin-configs.pc-noise").config,
+    require("plugin-configs.pc-noice").config,
     {}
   )
 )
