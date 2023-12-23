@@ -4,6 +4,11 @@ self-using nvim-config
 
 learning!
 
+## TODO
+
+[ ] add keybindings for edit $MYVIMRC
+[ ] add keybindings for sync $MYVIMRC
+
 ## keybindings
 
 - `+` means combination keys
