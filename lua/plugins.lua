@@ -44,6 +44,7 @@ require("lazy").setup(
     require("plugin-configs.pc-dressing").config,
     require("plugin-configs.pc-noice").config,
     require("plugin-configs.pc-lazygit").config,
+    require("plugin-configs.pc-stickybuf").config,
     {}
   )
 )
