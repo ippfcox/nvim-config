@@ -1,5 +1,7 @@
 local M = {}
 
+vim.o.mousemoveevent = true
+
 M.config = {
   {
     "akinsho/bufferline.nvim",
@@ -20,10 +22,21 @@ M.config = {
           },
           color_icons = true,
           separator_style = "slant",
+          hover = {
+            enabled = true,
+            delay = 0,
+            reveal = { "close" },
+          },
+          close_command = function(bufnum)
+            require("bufdelete").bufdelete(bufnum, true)
+          end,
         },
       })
     end,
   },
+  {
+    "famiu/bufdelete.nvim",
+  }, -- delete buffer without messing layout up
 }
 
 return M

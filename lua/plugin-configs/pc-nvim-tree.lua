@@ -3,7 +3,6 @@ local M = {}
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-
 local icon = require("util.icon").icon(false)
 
 M.config = {
@@ -56,9 +55,6 @@ M.config = {
       })
     end,
   },
-  {
-    "famiu/bufdelete.nvim",
-  }, -- delete buffer without messing layout up
 }
 
 return M
