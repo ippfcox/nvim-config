@@ -45,6 +45,7 @@ require("lazy").setup(
     require("plugin-configs.pc-noice").config,
     require("plugin-configs.pc-lazygit").config,
     require("plugin-configs.pc-stickybuf").config,
+    require("plugin-configs.pc-hover").config,
     {}
   )
 )

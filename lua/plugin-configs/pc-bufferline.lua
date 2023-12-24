@@ -1,7 +1,5 @@
 local M = {}
 
-vim.o.mousemoveevent = true
-
 M.config = {
   {
     "akinsho/bufferline.nvim",

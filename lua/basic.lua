@@ -50,6 +50,7 @@ vim.o.whichwrap = "b,s,<,>,[,],h,l"
 vim.o.hidden = true
 -- 鼠标支持
 vim.o.mouse = "a"
+vim.o.mousemoveevent = true
 -- 不要备份
 vim.o.backup = false
 vim.o.writebackup = false
