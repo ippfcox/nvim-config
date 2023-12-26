@@ -28,7 +28,7 @@ M.config = {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "vsnip" },
-          { name = "nvim_lsp_signature_help" },
+          -- { name = "nvim_lsp_signature_help" },
           { name = "luasnip" },
         }, {
           { name = "buffer" },
@@ -129,9 +129,9 @@ M.config = {
   {
     "hrsh7th/vim-vsnip",
   },
-  {
-    "hrsh7th/cmp-nvim-lsp-signature-help",
-  },
+  -- {
+  --   "hrsh7th/cmp-nvim-lsp-signature-help",
+  -- },
   {
     "rafamadriz/friendly-snippets",
   },

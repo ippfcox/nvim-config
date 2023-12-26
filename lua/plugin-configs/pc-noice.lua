@@ -28,9 +28,11 @@ M.config = {
         -- should config border to single
         views = {
           cmdline_popup = { border = { style = "single" } },
-          popup_menu = { border = { style = "single" } },
+          popupmenu = { border = { style = "single" } },
           -- messages = { border = { style = "single" } },
           notify = { border = { style = "single" } },
+          popup = { border = { style = "single" } },
+          hover = { border = { style = "single" } },
         },
       })
     end,
