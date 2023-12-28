@@ -29,7 +29,7 @@ require("lazy").setup(
     require("plugin-configs.pc-telescope").config,
     require("plugin-configs.pc-toggleterm").config,
     require("plugin-configs.pc-comment").config,
-    require("plugin-configs.pc-dashboard-nvim").config,
+    -- require("plugin-configs.pc-dashboard-nvim").config,
     require("plugin-configs.pc-which-key").config,
     require("plugin-configs.pc-nvim-autopairs").config,
     require("plugin-configs.pc-mason-tool-installer").config,
