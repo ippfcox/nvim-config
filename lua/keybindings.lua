@@ -35,7 +35,10 @@ vim.keymap.set("n", "<leader>gL", require("plugin-configs.pc-lsp").list_workspac
 vim.keymap.set("n", "<leader>gx", vim.diagnostic.open_float, opt("diagnostic", "Open Float"))
 
 -- nvim-tree
-vim.keymap.set("n", "<A-m>", require("nvim-tree.api").tree.toggle, opt("nvim-tree", "Toggle"))
+-- vim.keymap.set("n", "<A-m>", require("nvim-tree.api").tree.toggle, opt("nvim-tree", "Toggle"))
+
+-- neo-tree
+vim.keymap.set("n", "<A-m>", ":Neotree toggle<CR>", opt("neo-tree", "Toggle"))
 
 -- bufferline
 vim.keymap.set("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt("bufferline", "Go to Left Buffer"))

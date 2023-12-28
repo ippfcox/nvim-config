@@ -17,7 +17,7 @@ require("lazy").setup(
   require("util.util").merge_arrays(
     require("plugin-configs.pc-debug").config,
     require("plugin-configs.pc-colorscheme").config,
-    require("plugin-configs.pc-nvim-tree").config,
+    -- require("plugin-configs.pc-nvim-tree").config,
     require("plugin-configs.pc-bufferline").config,
     require("plugin-configs.pc-lsp").config,
     require("plugin-configs.pc-nvim-treesitter").config,
@@ -46,6 +46,7 @@ require("lazy").setup(
     require("plugin-configs.pc-lazygit").config,
     require("plugin-configs.pc-stickybuf").config,
     require("plugin-configs.pc-hover").config,
+    require("plugin-configs.pc-neo-tree").config,
     {}
   )
 )

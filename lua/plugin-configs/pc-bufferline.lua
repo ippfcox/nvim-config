@@ -11,6 +11,13 @@ M.config = {
           -- 留出nvim-tree的边栏空间
           offsets = {
             {
+              filetype = "neo-tree",
+              text = "GOOD GOOD STUDY, DAY DAY UP",
+              highlight = "Directory",
+              text_align = "center",
+              separator = false,
+            },
+            {
               filetype = "NvimTree",
               text = " File Explorer",
               highlight = "Directory",
