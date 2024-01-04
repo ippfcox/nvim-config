@@ -108,4 +108,3 @@ function M.icon(add_space)
 end
 
 return M
-
