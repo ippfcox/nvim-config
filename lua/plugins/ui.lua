@@ -209,4 +209,8 @@ return {
     },
   },
   -- dashboard
+  {
+    "lewis6991/satellite.nvim",
+    opts = {},
+  },
 }

@@ -202,9 +202,12 @@ return {
           node_decremental = "<BS>",
           scope_incremental = "<TAB>",
         },
-        indent = {
-          enable = false,
-        },
+      },
+      indent = {
+        enable = true,
+      },
+      autotag = {
+        enable = true,
       },
     },
   },
@@ -213,5 +216,23 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter-context",
+  },
+  {
+    "numToStr/Comment.nvim",
+    opts = {
+      toggler = require("config.keymaps").comment.toggler,
+      opleader = require("config.keymaps").comment.opleader,
+      extra = require("config.keymaps").comment.extra,
+    },
+  },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {},
+  },
+  -- not work correctly
+  {
+    "windwp/nvim-ts-autotag",
+    opts = {},
   },
 }

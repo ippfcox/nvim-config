@@ -1,3 +1,5 @@
+local icon = require("util.icon").icon(false)
+
 return {
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -16,6 +18,48 @@ return {
       source_selector = {
         winbar = true,
         statusline = true,
+      },
+    },
+  },
+  {
+    "stevearc/aerial.nvim",
+    opts = {
+      attach_mode = "global",
+      backends = { "lsp", "treesitter", "markdown", "man" },
+      show_guides = true,
+      guides = {
+        mid_item = "├╴",
+        last_item = "└╴",
+        nested_top = "│ ",
+        whitespace = "  ",
+      },
+      filter_kind = false,
+      icons = {
+        Text = icon.Text,
+        Method = icon.Method,
+        Function = icon.Function,
+        Constructor = icon.Constructor,
+        Field = icon.Field,
+        Variable = icon.Variable,
+        Class = icon.Class,
+        Interface = icon.Interface,
+        Module = icon.Module,
+        Property = icon.Property,
+        Unit = icon.Unit,
+        Value = icon.Value,
+        Enum = icon.Enum,
+        Keyword = icon.Keyword,
+        Snippet = icon.Snippet,
+        Color = icon.Color,
+        File = icon.File,
+        Reference = icon.Reference,
+        Folder = icon.Folder,
+        EnumMember = icon.EnumMember,
+        Constant = icon.Constant,
+        Struct = icon.Struct,
+        Event = icon.Event,
+        Operator = icon.Operator,
+        TypeParameter = icon.TypeParameter,
       },
     },
   },
