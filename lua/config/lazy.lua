@@ -10,13 +10,14 @@ require("lazy").setup({
     require("plugins.editor"),
     require("plugins.coding"),
     require("plugins.lsp"),
+    require("plugins.tool"),
   },
   defaults = {
     lazy = false,
     version = false,
   },
   install = { colorscheme = { "tokyonight" } },
-  checker = { enabled = true },
+  checker = { enabled = false },
   performance = {
     rtp = {
       disabled_plugins = {

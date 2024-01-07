@@ -94,6 +94,11 @@ vim.keymap.set("n", "<leader>xx", trouble.toggle, { desc = "trouble: toggle", no
 vim.keymap.set("n", "<leader>f", conform.format, { desc = "conform: format", noremap = true })
 -- aerial
 vim.keymap.set("n", "<leader>aa", aerial.toggle, { desc = "aerial: toggle", noremap = true })
+-- toggleterm
+vim.keymap.set("n", "<leader>``", ":ToggleTerm direction=horizontal<CR>", { desc = "toggletrem: toggle horizontal terminal", noremap = true })
+vim.keymap.set("n", "<leader><Esc><Esc>", ":ToggleTerm direction=horizontal<CR>", { desc = "toggletrem: toggle horizontal terminal", noremap = true })
+vim.keymap.set("n", "<leader>`f", ":ToggleTerm direction=float<CR>", { desc = "toggleterm: toggle float terminal", noremap = true })
+vim.keymap.set("n", "<leader><Esc>f", ":ToggleTerm direction=float<CR>", { desc = "toggleterm: toggle float terminal", noremap = true })
 
 local plugin_keymaps = {
   -- nvim-cmp

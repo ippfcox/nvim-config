@@ -33,6 +33,24 @@ return {
       },
     },
   },
+  -- {
+  --   "nvimdev/dashboard-nvim",
+  --   event = "VimEnter",
+  --   dependencies = { "nvim-tree/nvim-web-devicons" },
+  --   opts = {
+  --     theme = "hyper",
+  --     config = {
+  --       header = {
+  --         "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
+  --         "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║",
+  --         "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║",
+  --         "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║",
+  --         "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
+  --         "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
+  --       },
+  --     },
+  --   },
+  -- },
   {
     "akinsho/bufferline.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons", "famiu/bufdelete.nvim" },
