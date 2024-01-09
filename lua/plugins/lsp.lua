@@ -93,6 +93,11 @@ return {
         "cmake", -- cmake
         "gopls", -- go
         "goimports", -- go format
+        "gotests",
+        "gomodifytags",
+        "impl",
+        "delve",
+        "staticcheck",
         "marksman", -- markdown
         "prettier",
       },
