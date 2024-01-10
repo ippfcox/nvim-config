@@ -50,6 +50,7 @@ local aerial = {
 vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "write file", noremap = true })
 vim.keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "quit a window", noremap = true })
 vim.keymap.set("t", "<esc>", "<c-\\><c-n>", { desc = "TERMINAL to NORMAL", noremap = true })
+vim.keymap.set("n", "<esc>", "<cmd>noh<cr>", { desc = "clear search highlight", noremap = true })
 vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "goto left window", noremap = true })
 vim.keymap.set("n", "<A-j>", "<C-w>j", { desc = "goto lower window", noremap = true })
 vim.keymap.set("n", "<A-k>", "<C-w>k", { desc = "goto upper window", noremap = true })

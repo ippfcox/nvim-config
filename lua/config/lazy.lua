@@ -11,11 +11,16 @@ require("lazy").setup({
     require("plugins.coding"),
     require("plugins.lsp"),
     require("plugins.tool"),
+    -- { "ippfcoxdbg/nvim-example-lua-plugin", dev = true },
   },
   defaults = {
     lazy = false,
     version = false,
   },
+  -- dev = {
+  --   path = "~/workdir/luaproj",
+  --   pattern = { "ippfcoxdbg" },
+  -- },
   install = { colorscheme = { "tokyonight" } },
   checker = { enabled = false },
   performance = {
