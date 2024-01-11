@@ -73,6 +73,9 @@ vim.keymap.set("n", "<leader>gA", vim.lsp.buf.add_workspace_folder, { desc = "ls
 vim.keymap.set("n", "<leader>gR", vim.lsp.buf.remove_workspace_folder, { desc = "lsp: remove_workspace_folder", noremap = true })
 -- vim.keymap.set("n", "<leader>gL", require("plugin-configs.pc-lsp").list_workspace_folders, { desc = "lsp: ", noremap = true })
 vim.keymap.set("n", "<leader>gx", vim.diagnostic.open_float, { desc = "lsp: open_float", noremap = true })
+vim.keymap.set("n", "<leader>gj", vim.diagnostic.goto_next, { desc = "lsp: goto_next", noremap = true })
+vim.keymap.set("n", "<leader>gk", vim.diagnostic.goto_prev, { desc = "lsp: goto_prev", noremap = true })
+
 -- neo-tree
 vim.keymap.set("n", "<leader>ee", neotree.toggle, { desc = "neo-tree: toggle cwd", noremap = true, silent = true })
 vim.keymap.set("n", "<leader>eg", neotree.toggle_git_status, { desc = "neo-tree: toggle cwd", noremap = true, silent = true })
