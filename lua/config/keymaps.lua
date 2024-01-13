@@ -46,6 +46,12 @@ local aerial = {
   end,
 }
 
+local lsp = {
+    hover = function()
+        print(vim.fn.getmousepos())
+    end
+}
+
 -- builtin
 vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "write file", noremap = true })
 vim.keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "quit a window", noremap = true })
@@ -72,6 +78,7 @@ vim.keymap.set("n", "<leader>gn", vim.lsp.buf.rename, { desc = "lsp: rename", no
 vim.keymap.set("n", "<leader>gA", vim.lsp.buf.add_workspace_folder, { desc = "lsp: add_workspace_folder", noremap = true })
 vim.keymap.set("n", "<leader>gR", vim.lsp.buf.remove_workspace_folder, { desc = "lsp: remove_workspace_folder", noremap = true })
 -- vim.keymap.set("n", "<leader>gL", require("plugin-configs.pc-lsp").list_workspace_folders, { desc = "lsp: ", noremap = true })
+-- vim.keymap.set("n", "<MouseMove>", , {desc = "lsp: hover", noremap = true})
 vim.keymap.set("n", "<leader>gx", vim.diagnostic.open_float, { desc = "lsp: open_float", noremap = true })
 vim.keymap.set("n", "<leader>gj", vim.diagnostic.goto_next, { desc = "lsp: goto_next", noremap = true })
 vim.keymap.set("n", "<leader>gk", vim.diagnostic.goto_prev, { desc = "lsp: goto_prev", noremap = true })
