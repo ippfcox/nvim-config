@@ -1,10 +1,22 @@
-local M = {}
-
 local icon = require("util.icon").icon(false)
 
-M.config = {
+return {
   {
     "hrsh7th/nvim-cmp",
+    event = "VeryLazy",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-calc",
+      "hrsh7th/cmp-vsnip",
+      "hrsh7th/vim-vsnip",
+      -- "hrsh7th/cmp-nvim-lsp-signature-help",
+      "rafamadriz/friendly-snippets",
+      "onsails/lspkind-nvim",
+      "saadparwaiz1/cmp_luasnip",
+    },
     config = function()
       local cmp = require("cmp")
 
@@ -24,7 +36,7 @@ M.config = {
             border = "single",
           },
         },
-        mapping = require("keybindings").cmp(cmp),
+        mapping = require("config.keymaps").cmp(cmp),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "vsnip" },
@@ -109,38 +121,122 @@ M.config = {
     end,
   },
   {
-    "hrsh7th/cmp-nvim-lsp",
+    "stevearc/conform.nvim",
+    lazy = true,
+    opts = {
+      formatters_by_ft = {
+        lua = { "stylua" },
+        go = { "goimports", "gofmt" },
+        c = { "clang_format" },
+        cpp = { "clang_format" },
+        sh = { "shfmt" },
+        html = { "prettier" },
+        css = { "prettier" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+      },
+      formatters = {
+        stylua = {
+          command = "stylua",
+          args = {
+            "--search-parent-directories",
+            "--stdin-filepath",
+            "$FILENAME",
+            "-",
+            "--call-parentheses",
+            "Always",
+            "--column-width",
+            "360",
+            "--indent-type",
+            "Spaces",
+            "--indent-width",
+            "2",
+            "--line-endings",
+            "Unix",
+          },
+        },
+      },
+    },
   },
   {
-    "hrsh7th/cmp-buffer",
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = {
+          "bash",
+          "c",
+          "cmake",
+          "cpp",
+          "diff",
+          "go",
+          "gomod",
+          "gosum",
+          "html",
+          "javascript",
+          "jsdoc",
+          "json",
+          "lua",
+          "luadoc",
+          "luap",
+          "markdown",
+          "markdown_inline",
+          "python",
+          "query",
+          "regex",
+          "toml",
+          "tsx",
+          "typescript",
+          "vim",
+          "vimdoc",
+          "yaml",
+        },
+        sync_install = false,
+        auto_install = false,
+        ignore_install = {},
+        highlight = {
+          enable = true,
+          additional_vim_regex_highlighting = false,
+        },
+        incremental_selection = {
+          enable = true,
+          keymaps = {
+            init_selection = "<CR>",
+            node_incremental = "<CR>",
+            node_decremental = "<BS>",
+            scope_incremental = "<TAB>",
+          },
+        },
+        indent = {
+          enable = true,
+        },
+        autotag = {
+          enable = true,
+        },
+      })
+    end,
   },
   {
-    "hrsh7th/cmp-path",
+    "nvim-treesitter/nvim-treesitter-textobjects",
   },
   {
-    "hrsh7th/cmp-cmdline",
+    "nvim-treesitter/nvim-treesitter-context",
   },
   {
-    "hrsh7th/cmp-calc",
+    "numToStr/Comment.nvim",
+    opts = {
+      toggler = require("config.keymaps").comment.toggler,
+      opleader = require("config.keymaps").comment.opleader,
+      extra = require("config.keymaps").comment.extra,
+    },
   },
   {
-    "hrsh7th/cmp-vsnip",
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {},
   },
   {
-    "hrsh7th/vim-vsnip",
-  },
-  -- {
-  --   "hrsh7th/cmp-nvim-lsp-signature-help",
-  -- },
-  {
-    "rafamadriz/friendly-snippets",
-  },
-  {
-    "onsails/lspkind-nvim",
-  },
-  {
-    "saadparwaiz1/cmp_luasnip",
+    "windwp/nvim-ts-autotag",
+    opts = {},
   },
 }
-
-return M
